@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Artigo completo sobre Star Wars: a história, personagens, filmes e impacto cultural da famosa saga espacial criada por George Lucas.">
+    <meta name="keywords" content="Star Wars, Guerra nas Estrelas, George Lucas, Lucasfilm, Disney, saga espacial, ficção científica">
+    <meta name="author" content="Wikipedia Moderna">
+    <meta property="og:title" content="Star Wars - Wikipedia Moderna">
+    <meta property="og:description" content="Conheça a completa história da saga Star Wars, seus personagens e impacto cultural.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://example.com/star-wars-social.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>Star Wars - Wikipedia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --wikipedia-blue: #3366cc;
+            --wikipedia-light-blue: #eaf3ff;
+            --wikipedia-border: #a7d7f9;
+            --wikipedia-sidebar: #f6f6f6;
+            --text-color: #202122;
+            --background-color: #ffffff;
+            --header-height: 60px;
+            --sidebar-width: 240px;
+            --content-width: 800px;
+            --anchor-width: 220px;
+            --spacing: 16px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            padding-top: var(--header-height);
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: var(--header-height);
+            background-color: var(--background-color);
+            border-bottom: 1px solid #eaecf0;
+            display: flex;
+            align-items: center;
+            padding: 0 var(--spacing);
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .logo {
+            flex: 0 0 auto;
+        }
+
+        .logo img {
+            height: 40px;
+            width: auto;
+        }
+
+        .search-bar {
+            flex: 1;
+            max-width: 600px;
+            margin: 0 var(--spacing);
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid #a2a9b1;
+            border-radius: 2px;
+            font-size: 16px;
+        }
+
+        .user-actions {
+            flex: 0 0 auto;
+            display: flex;
+            gap: 16px;
+        }
+
+        .user-actions a {
+            color: var(--wikipedia-blue);
+            text-decoration: none;
+        }
+
+        /* Main Layout */
+        .container {
+            display: flex;
+            max-width: calc(var(--sidebar-width) + var(--content-width) + var(--anchor-width) + (var(--spacing) * 4));
+            margin: 0 auto;
+            padding: var(--spacing);
+            gap: var(--spacing);
+        }
+
+        /* Sidebar */
+        .sidebar {
+            flex: 0 0 var(--sidebar-width);
+            background-color: var(--wikipedia-sidebar);
+            border-radius: 4px;
+            padding: var(--spacing);
+            align-self: flex-start;
+        }
+
+        .sidebar h2 {
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #eaecf0;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar li {
+            margin-bottom: 8px;
+        }
+
+        .sidebar a {
+            color: var(--wikipedia-blue);
+            text-decoration: none;
+        }
+
+        .sidebar a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            max-width: var(--content-width);
+        }
+
+        .article-header {
+            border-bottom: 1px solid #eaecf0;
+            padding-bottom: 16px;
+            margin-bottom: 24px;
+        }
+
+        .article-header h1 {
+            font-size: 1.8rem;
+            font-weight: 400;
+            margin-bottom: 8px;
+        }
+
+        .article-meta {
+            color: #54595d;
+            font-size: 0.9rem;
+        }
+
+        .infobox {
+            border: 1px solid var(--wikipedia-border);
+            background-color: var(--wikipedia-light-blue);
+            padding: 16px;
+            margin: 0 0 24px 24px;
+            float: right;
+            width: 280px;
+            border-radius: 4px;
+        }
+
+        .infobox h3 {
+            text-align: center;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .infobox img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 12px;
+        }
+
+        .infobox table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .infobox th, .infobox td {
+            padding: 6px;
+            vertical-align: top;
+        }
+
+        .infobox th {
+            text-align: left;
+            width: 40%;
+        }
+
+        .content-section {
+            margin-bottom: 32px;
+        }
+
+        .content-section h2 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #eaecf0;
+            margin-bottom: 16px;
+        }
+
+        .content-section p {
+            margin-bottom: 16px;
+        }
+
+        .thumbnail {
+            border: 1px solid #c8ccd1;
+            background-color: #f8f9fa;
+            padding: 4px;
+            margin: 0 0 16px 16px;
+            float: right;
+            width: 220px;
+            text-align: center;
+        }
+
+        .thumbnail img {
+            width: 100%;
+            height: auto;
+        }
+
+        .thumbnail figcaption {
+            font-size: 0.85rem;
+            padding: 6px 0;
+        }
+
+        /* Anchors */
+        .anchors {
+            flex: 0 0 var(--anchor-width);
+            background-color: var(--wikipedia-sidebar);
+            border-radius: 4px;
+            padding: var(--spacing);
+            align-self: flex-start;
+        }
+
+        .anchors h2 {
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #eaecf0;
+        }
+
+        .anchors ul {
+            list-style: none;
+        }
+
+        .anchors li {
+            margin-bottom: 8px;
+        }
+
+        .anchors a {
+            color: var(--wikipedia-blue);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .anchors a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #f8f9fa;
+            border-top: 1px solid #eaecf0;
+            padding: 24px var(--spacing);
+            margin-top: 32px;
+            font-size: 0.85rem;
+        }
+
+        .footer-content {
+            max-width: calc(var(--sidebar-width) + var(--content-width) + var(--anchor-width) + (var(--spacing) * 4));
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer-section h3 {
+            font-size: 1rem;
+            margin-bottom: 12px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section li {
+            margin-bottom: 8px;
+        }
+
+        .footer-section a {
+            color: var(--wikipedia-blue);
+            text-decoration: none;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 24px;
+            color: #54595d;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .container {
+                flex-wrap: wrap;
+            }
+            
+            .sidebar {
+                flex: 0 0 100%;
+                order: 3;
+            }
+            
+            .anchors {
+                flex: 0 0 100%;
+                order: 2;
+            }
+            
+            .main-content {
+                flex: 0 0 100%;
+                order: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            :root {
+                --spacing: 12px;
+            }
+            
+            header {
+                flex-wrap: wrap;
+                height: auto;
+                padding: 8px;
+            }
+            
+            .logo {
+                flex: 0 0 100%;
+                margin-bottom: 8px;
+                text-align: center;
+            }
+            
+            .search-bar {
+                flex: 1;
+                margin: 0;
+            }
+            
+            .infobox {
+                float: none;
+                margin: 0 0 24px 0;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <main class="container">
+        <aside class="sidebar" aria-labelledby="sidebar-title">
+            <h2 id="sidebar-title">Conteúdo</h2>
+            <ul>
+                <li><a href="#introducao">Introdução</a></li>
+                <li><a href="#historia">História</a></li>
+                <li><a href="#filmes">Filmes</a></li>
+                <li><a href="#personagens">Personagens</a></li>
+                <li><a href="#impacto">Impacto Cultural</a></li>
+                <li><a href="#expansao">Expansão da Franquia</a></li>
+                <li><a href="#ver-tambem">Ver também</a></li>
+            </ul>
+        </aside>
+
+        <article class="main-content">
+            <header class="article-header">
+                <h1>Wiki - Star Wars</h1>
+            </header>
+
+            <section id="introducao" class="content-section">
+                <h2>Introdução</h2>
+                <p><strong>Star Wars</strong> (bra: <i>Guerra nas Estrelas</i>) é uma franquia do tipo space opera estadunidense criada pelo cineasta George Lucas, que conta com uma série de nove filmes de fantasia científica e dois spin-offs.</p>
+                <p>A franquia retrata as aventuras de personagens de uma galaxia fictícia enquanto batalham entre o lado luminoso e sombrio da "Força". A trama principal da série é centrada em torno de uma família, os Skywalker, e seu legado.</p>
+            </section>
+
+            <section id="historia" class="content-section">
+                <h2>História</h2>
+                <p>O primeiro filme da série, Star Wars (posteriormente renomeado Star Wars: Episódio IV - Uma Nova Esperança), foi lançado em 25 de maio de 1977 e se tornou um fenômeno mundial inesperado de cultura popular.</p>
+                
+                <figure class="thumbnail">
+                    <img src="" alt="George Lucas">
+                    <figcaption>George Lucas, criador de Star Wars</figcaption>
+                </figure>
+                
+                <p>Originalmente, Lucas tinha planos para uma trilogia de filmes, mas a expansão do universo resultou em duas trilogias adicionais, diversos filmes spin-off, séries de televisão, livros, quadrinhos e video games.</p>
+                <p>Em 2012, a The Walt Disney Company adquiriu a Lucasfilm por US$ 4,05 bilhões e anunciou uma nova trilogia de filmes, começando com Star Wars: O Despertar da Força em 2015.</p>
+            </section>
+
+            <section id="filmes" class="content-section">
+                <h2>Filmes</h2>
+                <p>A série principal de filmes é composta por três trilogias:</p>
+                <h3>Trilogia Original</h3>
+                <ul>
+                    <li>Episódio IV: Uma Nova Esperança (1977)</li>
+                    <li>Episódio V: O Império Contra-Ataca (1980)</li>
+                    <li>Episódio VI: O Retorno de Jedi (1983)</li>
+                </ul>
+                
+                <h3>Trilogia Prequela</h3>
+                <ul>
+                    <li>Episódio I: A Ameaça Fantasma (1999)</li>
+                    <li>Episódio II: Ataque dos Clones (2002)</li>
+                    <li>Episódio III: A Vingança dos Sith (2005)</li>
+                </ul>
+                
+                <h3>Trilogia Sequela</h3>
+                <ul>
+                    <li>Episódio VII: O Despertar da Força (2015)</li>
+                    <li>Episódio VIII: Os Últimos Jedi (2017)</li>
+                    <li>Episódio IX: A Ascensão Skywalker (2019)</li>
+                </ul>
+            </section>
+
+            <section id="personagens" class="content-section">
+                <h2>Personagens Principais</h2>
+                <p>Star Wars apresenta diversos personagens icônicos que se tornaram parte da cultura popular mundial:</p>
+                
+                <ul>
+                    <li><strong>Luke Skywalker</strong>: O herói da trilogia original, um jovem que descobre seu potencial com a Força.</li>
+                    <li><strong>Princesa Leia</strong>: Líder da Aliança Rebelde e irmã gêmea de Luke.</li>
+                    <li><strong>Han Solo</strong>: Contrabandista que se junta à causa rebelde.</li>
+                    <li><strong>Darth Vader</strong>: Lorde Sith e antagonista principal, revelado como Anakin Skywalker, pai de Luke e Leia.</li>
+                    <li><strong>Obi-Wan Kenobi</strong>: Mestre Jedi que treina Luke.</li>
+                    <li><strong>Yoda</strong>: Sábio Mestre Jedi que completa o treinamento de Luke.</li>
+                </ul>
+            </section>
+
+            <section id="impacto" class="content-section">
+                <h2>Impacto Cultural</h2>
+                <p>Star Wars é considerada uma das maiores e mais bem-sucedidas franquias de entretenimento do mundo. Sua influência na cultura popular é imensa, com referências em diversos meios e gerações.</p>
+                <p>A franquia revolucionou a indústria cinematográfica com seus efeitos especiais inovadores, sons característicos e design de produção único.</p>
+                <p>Frases como "Que a Força esteja com você" se tornaram icônicas e são reconhecidas mundialmente.</p>
+            </section>
+
+            <section id="expansao" class="content-section">
+                <h2>Expansão da Franquia</h2>
+                <p>Além dos filmes principais, o universo de Star Wars se expandiu para:</p>
+                
+                <ul>
+                    <li>Séries de televisão (The Clone Wars, Rebels, The Mandalorian)</li>
+                    <li>Filmes spin-off (Rogue One, Solo)</li>
+                    <li>Inúmeros livros e quadrinhos</li>
+                    <li>Jogos eletrônicos</li>
+                    <li>Parques temáticos (Galaxy's Edge)</li>
+                    <li>Mercadorias e brinquedos</li>
+                </ul>
+            </section>
+
+            <section id="ver-tambem" class="content-section">
+                <h2>Ver também</h2>
+                <ul>
+                    <li>Universo Expandido de Star Wars</li>
+                    <li>Lista de planetas de Star Wars</li>
+                    <li>Força (Star Wars)</li>
+                    <li>Jedi</li>
+                    <li>Sith</li>
+                </ul>
+            </section>
+        </article>
+
+                    <aside class="infobox" aria-labelledby="infobox-title">
+                <h3 id="infobox-title">Star Wars</h3>
+                <img src="" alt="Logo de Star Wars">
+                <table>
+                    <tr>
+                        <th>Criador</th>
+                        <td>George Lucas</td>
+                    </tr>
+                    <tr>
+                        <th>Trabalho original</th>
+                        <td>Star Wars (1977)</td>
+                    </tr>
+                    <tr>
+                        <th>Proprietário</th>
+                        <td>Lucasfilm (Disney)</td>
+                    </tr>
+                    <tr>
+                        <th>Anos</th>
+                        <td>1977-presente</td>
+                    </tr>
+                    <tr>
+                        <th>Filmes e televisão</th>
+                        <td>12 filmes, várias séries</td>
+                    </tr>
+                    <tr>
+                        <th>Jogos</th>
+                        <td>Vários jogos eletrônicos</td>
+                    </tr>
+                </table>
+            </aside>
+
+    </main>
+
+    <footer role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Wikipedia</h3>
+                <ul>
+                    <li><a href="#">Página principal</a></li>
+                    <li><a href="#">Conteúdo destacado</a></li>
+                    <li><a href="#">Eventos atuais</a></li>
+                    <li><a href="#">Doações</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Participação</h3>
+                <ul>
+                    <li><a href="#">Ajuda</a></li>
+                    <li><a href="#">Página de testes</a></li>
+                    <li><a href="#">Portal comunitário</a></li>
+                    <li><a href="#">Central de ajuda</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Recursos</h3>
+                <ul>
+                    <li><a href="#">Páginas relacionadas</a></li>
+                    <li><a href="#">Alterações relacionadas</a></li>
+                    <li><a href="#">Carregar ficheiro</a></li>
+                    <li><a href="#">Páginas especiais</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p></p>
+        </div>
+    </footer>
+</body>
+</html>
