@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tags HTML5 - Exemplos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+        }
+        
+        nav {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        
+        nav li {
+            margin: 0 15px;
+        }
+        
+        nav a {
+            color: #2575fc;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: #6a11cb;
+            text-decoration: underline;
+        }
+        
+        section {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            color: #2575fc;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+        }
+        
+        .tag-container {
+            margin-bottom: 20px;
+            padding: 15px;
+            border-left: 4px solid #6a11cb;
+            background-color: #f9f9f9;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .tag-name {
+            font-weight: bold;
+            color: #6a11cb;
+            margin-bottom: 5px;
+        }
+        
+        .tag-example {
+            padding: 10px;
+            background-color: #eee;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        
+        .tag-description {
+            color: #666;
+            font-size: 0.95rem;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            color: #666;
+            border-top: 1px solid #ddd;
+        }
+        
+        .code {
+            font-family: 'Courier New', monospace;
+            background-color: #f1f1f1;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav li {
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tags HTML5</h1>
+        <p>Exemplos de utilização das principais tags HTML5</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#titulos">Títulos</a></li>
+            <li><a href="#texto">Formatação de Texto</a></li>
+            <li><a href="#listas">Listas</a></li>
+            <li><a href="#links">Links</a></li>
+            <li><a href="#outras">Outras Tags</a></li>
+        </ul>
+    </nav>
+    
+    <section id="titulos">
+        <h2>Tags de Título (Heading)</h2>
+        
+        <div class="tag-container">
+            <div class="tag-name">&lt;h1&gt; a &lt;h6&gt;</div>
+            <div class="tag-example">
+                <h1>Título H1</h1>
+                <h2>Título H2</h2>
+                <h3>Título H3</h3>
+                <h4>Título H4</h4>
+                <h5>Título H5</h5>
+                <h6>Título H6</h6>
+            </div>
+            <div class="tag-description">
+                Tags usadas para definir títulos e subtítulos, onde &lt;h1&gt; é o mais importante e &lt;h6&gt; o menos importante.
+            </div>
+        </div>
+    </section>
+    
+    <section id="texto">
+        <h2>Formatação de Texto</h2>
+        
+        <div class="tag-container">
+            <div class="tag-name">&lt;p&gt;</div>
+            <div class="tag-example">
+                <p>Este é um parágrafo de texto. Ele é usado para agrupar conteúdos textuais.</p>
+            </div>
+            <div class="tag-description">
+                Define um parágrafo de texto.
+            </div>
+        </div>
+        
+        <div class="tag-container">
+            <div class="tag-name">&lt;mark&gt;</div>
+            <div class="tag-example">
+                <p>Este texto contém uma <mark>parte destacada</mark> com a tag mark.</p>
+            </div>
+            <div class="tag-description">
+                Usado para <mark>destacar</mark> parte do texto.
+            </div>
+        </div>
+        
+        <div class="tag-container">
+            <div class="tag-name">&lt;small&gt;</div>
+            <div class="tag-example">
+                <p>Texto normal e <small>texto pequeno</small>.</p>
+            </div>
+            <div class="tag-description">
+                Define texto menor, geralmente para notas ou direitos autorais.
+            </div>
+        </div>
+        
+        <div class="tag-container">
+            <div class="tag-name">&lt;i&gt;</div>
+            <div class="tag-example">
+                <p>Texto em <i>itálico</i> para ênfase ou termos técnicos.</p>
+            </div>
+            <div class="tag-description">
+                Usado para texto em itálico, geralmente para ênfase ou termos técnicos.
+            </div>
+        </div>
+        
+        <div class="tag-container">
+            <div class="tag-name">&lt;u&gt;</div>
+            <div class="tag-example">
+                <p>Texto <u>sublinhado</u> para indicar nomes próprios ou erros de ortografia.</p>
+            </div>
+            <div class="tag-description">
+                Usado para sublinhar texto.
+            </div>
+        </div>
+        
+        <div class="tag-container">
+            <div class="tag-name">&lt;strong&gt;</div>
+            <div class="tag-example">
+                <p>Texto com <strong>importância forte</strong>.</p>
+            </div>
+            <div class="tag-description">
+                Usado para dar forte importância ao texto (normalmente exibido em negrito).
+            </div>
+        </div>
+        
+        <div class="tag-container">
+            <div class="tag-name">&lt;font&gt;</div>
+            <div class="tag-example">
+                <p><font face="Arial" color="green" size="4">Texto com formatação específica usando a tag font.</font></p>
+            </div>
+            <div class="tag-description">
+                Tag obsoleta que era usada para especificar fonte, cor e tamanho do texto. Hoje em dia usamos CSS para isso.
+            </div>
+        </div>
+        
+        <div class="tag-container">
+            <div class="tag-name">&lt;del&gt;</div>
+            <div class="tag-example">
+                <p>Preço: <del>R$ 100,00</del> R$ 80,00</p>
+            </div>
+            <div class="tag-description">
+                Representa texto que foi removido do documento.
+            </div>
+        </div>
+        
+        <div class="tag-container">
+            <div class="tag-name">&lt;abbr&gt;</div>
+            <div class="tag-example">
+                <p>A <abbr title="World Wide Web">WWW</abbr> foi inventada por Tim Berners-Lee.</p>
+            </div>
+            <div class="tag-description">
+                Define uma abreviação ou acrônimo. O atributo <span class="code">title</span> contém a expansão do termo.
+            </div>
+        </div>
+    </section>
+    
+    <section id="listas">
+        <h2>Listas</h2>
+        
+        <div class="tag-container">
+            <div class="tag-name">&lt;ul&gt; e &lt;li&gt;</div>
+            <div class="tag-example">
+                <p>Lista não ordenada:</p>
+                <ul>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ul>
+            </div>
+            <div class="tag-description">
+                &lt;ul&gt; cria uma lista não ordenada (com marcadores) e &lt;li&gt; define cada item da lista.
+            </div>
+        </div>
+        
+        <div class="tag-container">
+            <div class="tag-name">&lt;ol&gt; e &lt;li&gt;</div>
+            <div class="tag-example">
+                <p>Lista ordenada:</p>
+                <ol>
+                    <li>Primeiro item</li>
+                    <li>Segundo item</li>
+                    <li>Terceiro item</li>
+                </ol>
+            </div>
+            <div class="tag-description">
+                &lt;ol&gt; cria uma lista ordenada (numérica ou alfabética) e &lt;li&gt; define cada item da lista.
+            </div>
+        </div>
+    </section>
+    
+    <section id="links">
+        <h2>Links</h2>
+        
+        <div class="tag-container">
+            <div class="tag-name">&lt;a&gt;</div>
+            <div class="tag-example">
+                <p>Visite o <a href="https://www.google.com" target="_blank">Google</a> para fazer pesquisas.</p>
+            </div>
+            <div class="tag-description">
+                Define um hyperlink. O atributo <span class="code">href</span> especifica o URL de destino.
+            </div>
+        </div>
+    </section>
+    
+    <section id="outras">
+        <h2>Outras Tags</h2>
+        
+        <div class="tag-container">
+            <div class="tag-name">&lt;hr&gt;</div>
+            <div class="tag-example">
+                <p>Texto acima da linha</p>
+                <hr>
+                <p>Texto abaixo da linha</p>
+            </div>
+            <div class="tag-description">
+                Cria uma linha horizontal para separar conteúdos.
+            </div>
+        </div>
+        
+        <div class="tag-container">
+            <div class="tag-name">&lt;sub&gt;</div>
+            <div class="tag-example">
+                <p>Fórmula da água: H<sub>2</sub>O</p>
+            </div>
+            <div class="tag-description">
+                Define texto subscrito (ligeiramente abaixo da linha normal).
+            </div>
+        </div>
+        
+        <div class="tag-container">
+            <div class="tag-name">&lt;sup&gt;</div>
+            <div class="tag-example">
+                <p>Teorema de Pitágoras: a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup></p>
+            </div>
+            <div class="tag-description">
+                Define texto sobrescrito (ligeiramente acima da linha normal).
+            </div>
+        </div>
+        
+        <div class="tag-container">
+            <div class="tag-name">&lt;blockquote&gt;</div>
+            <div class="tag-example">
+                <p>Citação famosa:</p>
+                <blockquote cite="https://www.pensador.com/frases_celebres/">
+                    "A vida é o que acontece enquanto você está ocupado fazendo outros planos."
+                </blockquote>
+            </div>
+            <div class="tag-description">
+                Define uma citação longa de outra fonte. O atributo <span class="code">cite</span> especifica a fonte da citação.
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <p>Site demonstrativo de tags HTML5 - Desenvolvido para fins educacionais</p>
+        <p><small>&copy; 2023 - Todos os direitos reservados</small></p>
+    </footer>
+</body>
+</html>
