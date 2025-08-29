@@ -2,13 +2,8 @@
 
 Este projeto é um desafio de desenvolvimento web que tem como objetivo praticar a utilização das principais tags HTML5 através da criação de um website básico.
 
-## 🎯 Objetivo
+## 📋 Tags HTML5
 
-Criar um website utilizando uma estrutura básica de HTML5, aplicando todas as tags explicadas durante as aulas práticas e algumas tags adicionais sugeridas para pesquisa.
-
-## 📋 Tags HTML5 a serem utilizadas
-
-### Tags ensinadas nas aulas:
 - **Cabeçalhos**: `<h1>` até `<h6>`
 - **Parágrafo**: `<p>`
 - **Formatação de texto**: 
@@ -27,8 +22,6 @@ Criar um website utilizando uma estrutura básica de HTML5, aplicando todas as t
   - `<sub>` - Texto subscrito
   - `<sup>` - Texto sobrescrito
   - `<blockquote>` - Bloco de citação
-
-### Tags sugeridas para pesquisa:
 - `<font>` - Formatação de fonte (tag obsoleta, mas para fins de aprendizado)
 - `<del>` - Texto deletado
 - `<abbr>` - Abreviação
