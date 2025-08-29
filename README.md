@@ -22,6 +22,7 @@ Este projeto é um desafio de desenvolvimento web que tem como objetivo praticar
   - `<sub>` - Texto subscrito
   - `<sup>` - Texto sobrescrito
   - `<blockquote>` - Bloco de citação
+- **Outras tags**:
 - `<font>` - Formatação de fonte (tag obsoleta, mas para fins de aprendizado)
 - `<del>` - Texto deletado
 - `<abbr>` - Abreviação
